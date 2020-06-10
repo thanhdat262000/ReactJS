@@ -17,7 +17,8 @@ class App extends Component {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {this.todoItems.map((item, index) =>  <TodoItem key = {index} title={item.title} state={item.isComplete}/>)}
+        {this.todoItems.length> 0 &&this.todoItems.map((item, index) =>  <TodoItem key = {index} title={item.title} state={item.isComplete}/>)}
+        {this.todoItems.length ===0 && 'Nothing here'}
       </header>
     </div>
   );
