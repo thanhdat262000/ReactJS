@@ -3,8 +3,24 @@
     font-weight: 300;
     font-size: 24px;
     color: #4d4d4d;
+    display: flex;
+    position: relative;
 }
-.TodoItem-complete {
+.TodoItem-complete p{
     text-decoration: line-through;
     opacity: 0.3;
+}
+.TodoItem > p {
+    margin: 0 0 0 20px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #eee;
+}
+.close {
+    position: absolute;
+    right: 10px;
+    margin: 5px 0px;
+    display: none;
+}
+.TodoItem:hover .close {
+    display: block;
 }
